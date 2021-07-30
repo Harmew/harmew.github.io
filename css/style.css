@@ -1,15 +1,233 @@
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
-  background-color: rgb(34, 34, 34);
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
-h1 {
+.container-geral {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 100vh);
+  grid-template-areas: 
+  "principal-container"
+  "sobre"
+  "portfolio"
+  "contato";
+
+}
+
+/* Principal */
+
+.principal-container {
+  grid-area: principal-container;
+  background-color: rgb(32, 32, 32);
+}
+
+/* Nav */
+
+.cena {
+  position: absolute;
+  z-index: 1;
+}
+
+
+#menu{
+  width: 40px;
+  height: 30px;
+  margin: 40px 40px 0px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.bar {
+  height: 6px;
+  width: 100%;
+  background-color: rgb(111, 0, 255);
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  border-bottom: 3px solid #fff;
+  width: 100%;
+  transition: 0.2s all;
+}
+
+.nav li {
+  list-style: none;
+  padding: 16px 0;
+}
+
+.nav {
+  padding: 0;
+  margin: 0 20px;
+  transition: 0.3s ease;
+  display: none;
+}
+
+.menu-bg, #menu-bar {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 40px 40px 0px 20px;
+  background: radial-gradient(circle, rgb(111, 0, 255), rgb(111, 0, 255));
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#menu-bar{
+  z-index: 2;
+}
+
+.change-bg {
+  width: 400px;
+  height: 400px;
+  transform: translate(60%,-30%);
+}
+
+.change .bar {
+  background-color: rgb(255, 255, 255);
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar3 {
+  transform: translate(-6px) rotate(45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change {
+  display: block;
+}
+
+/* Introdução */
+
+
+.initial {
+  position: relative;
+}
+
+.text-initial {
   text-align: center;
-  color: white;
-  border-bottom: 2px solid rgb(77, 2, 107)	;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+}
+
+.text-initial h1 {
+  font-size: 3em;
+  border-bottom: 3px solid rgb(111, 0, 255);
+  display: inline;
+}
+
+.text-initial p {
+  margin-top: 10px;
+  color: rgb(189, 189, 189);
+}
+
+
+.fundo {
+  position: absolute;
+  bottom: 0px;
+  z-index: 3;
+}
+
+.fundo ul {
+  display: flex;
+}
+
+.fundo li {
+  margin: 0 10px;
+}
+
+.fundo ul a img {
+  width: 30px;
+  opacity: 50%;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 10px;
+  left: 49.2%;
+  animation: MoveUpDown 1.8s linear infinite;
+  color: rgb(111, 0, 255);
+  
+}
+
+.scrolldown i {
+  animation: MoveUpDown 1.5s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 15px;
+  }
+}
+
+/* Sobre */
+
+.sobre {
+  grid-area: sobre;
+  margin: 50px auto;
+}
+
+.sobre h2{
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
+
+
+.portfolio {
+  grid-area: portfolio;
+  background-color: black;
+}
+
+.contato {
+  grid-area: contato;
 }
