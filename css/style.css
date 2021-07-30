@@ -11,4 +11,5 @@ body {
 h1 {
   margin: 0 auto;
   color: white;
+  border-bottom: 2px solid rgb(77, 2, 107)	;
 }
