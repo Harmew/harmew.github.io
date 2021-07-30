@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  margin: 0 auto;
+  text-align: center;
   color: white;
   border-bottom: 2px solid rgb(77, 2, 107)	;
 }
