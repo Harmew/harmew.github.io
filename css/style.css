@@ -22,7 +22,7 @@ img {
 .container-geral {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(4, 100vh) 80px;
+  grid-template-rows: repeat(4, 100vh) auto;
   grid-template-areas: 
   "principal-container"
   "sobre"
@@ -48,13 +48,15 @@ img {
 .cena2 {
   position: absolute;
   z-index: 2;
-
+  transform: rotateZ(00deg) rotateZ(15deg);
+  top: 100px;
+  left: -180px;
 }
 
 #menu{
   width: 50px;
   height: 30px;
-  margin: 40px 40px 0px 20px;
+  margin: 25px 25px 0px 20px;
   cursor: pointer;
   z-index: 10;
 }
@@ -90,27 +92,30 @@ img {
 
 .nav li {
   list-style: none;
-  padding: 16px 0;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .nav {
   padding: 0;
-  margin: 0 20px;
+  margin: 10px 15px 0 15px;
   transition: 0.3s ease;
   display: none;
 }
 
+/* Background nav */
+
 .menu-bg, #menu-bar {
   top: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
 }
 
 .menu-bg {
   z-index: 1;
   width: 0;
   height: 0;
-  margin: 40px 40px 0px 20px;
+  margin: 20px 26px 0px 20px;
   background: radial-gradient(circle, rgb(111, 0, 255), rgb(111, 0, 255));
   border-radius: 50%;
   transition: 0.3s ease;
@@ -121,24 +126,30 @@ img {
   position: fixed;
 }
 
+/* Background nav - onclick */
+
 .change-bg {
   width: 400px;
   height: 400px;
-  transform: translate(60%,-30%);
+  transform: translate(74%, -27%);
   z-index: 4;
   position: fixed;
 }
+
+/* Barras nav - onclick*/
 
 .change .bar {
   background-color: rgb(255, 255, 255);
 }
 
 .change #bar1 {
-  transform: translateY(4px) rotateZ(-50deg);
+  transform: translateY(11px) rotateZ(-47deg);
+  width: 53px;
 }
 
 .change #bar3 {
-  transform: translate(0px) rotatez(50deg);
+  transform: translate(-1px) rotateZ(48deg);
+  width: 53px;
 }
 
 .change #bar2 {
@@ -150,7 +161,6 @@ img {
 }
 
 /* Introdução */
-
 
 .initial {
   position: relative;
@@ -177,10 +187,9 @@ img {
   color: rgb(189, 189, 189);
 }
 
-
 .fundo {
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   z-index: 3;
 }
 
@@ -189,7 +198,7 @@ img {
 }
 
 .fundo li {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .fundo ul a img {
@@ -199,21 +208,20 @@ img {
 
 .scrolldown {
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   left: 49.2%;
   animation: MoveUpDown 1.8s linear infinite;
   color: rgb(111, 0, 255);
-  
 }
 
 .scrolldown i {
-  animation: MoveUpDown 0.3s forwards;
+  animation: MoveUpDown 0.3s ease-in-out forwards;
 }
 
 @keyframes MoveUpDown {
   0%,
   100% {
-    bottom: 50px;
+    bottom: 10px;
   }
   50% {
     bottom: 25px;
@@ -241,10 +249,7 @@ img {
 
 .sobre img {
   width: 200px;
-
 }
-
-
 
 /* Portfólio*/
 
@@ -265,6 +270,6 @@ img {
 
 .footer p {
   text-align: center;
-  margin-top: 36px;
   color: #fff;
+  padding: 30px;
 }
