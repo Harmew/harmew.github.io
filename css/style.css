@@ -15,16 +15,20 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  width: 100%;
+}
+
 .container-geral {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(4, 100vh);
+  grid-template-rows: repeat(4, 100vh) 80px;
   grid-template-areas: 
   "principal-container"
   "sobre"
   "portfolio"
-  "contato";
-
+  "contato"
+  "footer";
 }
 
 /* Principal */
@@ -41,9 +45,14 @@ body {
   z-index: 1;
 }
 
+.cena2 {
+  position: absolute;
+  z-index: 2;
+
+}
 
 #menu{
-  width: 40px;
+  width: 50px;
   height: 30px;
   margin: 40px 40px 0px 20px;
   cursor: pointer;
@@ -60,16 +69,17 @@ body {
 }
 
 #bar1 {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 #bar3 {
-  transform: translateY(4px);
+  transform: translateY(5px);
 }
 
 .nav li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .nav li a:hover {
@@ -107,13 +117,16 @@ body {
 }
 
 #menu-bar{
-  z-index: 2;
+  z-index: 5;
+  position: fixed;
 }
 
 .change-bg {
   width: 400px;
   height: 400px;
   transform: translate(60%,-30%);
+  z-index: 4;
+  position: fixed;
 }
 
 .change .bar {
@@ -121,11 +134,11 @@ body {
 }
 
 .change #bar1 {
-  transform: translateY(4px) rotateZ(-45deg);
+  transform: translateY(4px) rotateZ(-50deg);
 }
 
 .change #bar3 {
-  transform: translate(-6px) rotate(45deg);
+  transform: translate(0px) rotatez(50deg);
 }
 
 .change #bar2 {
@@ -186,7 +199,7 @@ body {
 
 .scrolldown {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 49.2%;
   animation: MoveUpDown 1.8s linear infinite;
   color: rgb(111, 0, 255);
@@ -194,16 +207,16 @@ body {
 }
 
 .scrolldown i {
-  animation: MoveUpDown 1.5s linear infinite;
+  animation: MoveUpDown 0.3s forwards;
 }
 
 @keyframes MoveUpDown {
   0%,
   100% {
-    bottom: 10px;
+    bottom: 50px;
   }
   50% {
-    bottom: 15px;
+    bottom: 25px;
   }
 }
 
@@ -211,7 +224,8 @@ body {
 
 .sobre {
   grid-area: sobre;
-  margin: 50px auto;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 .sobre h2{
@@ -219,15 +233,38 @@ body {
   text-align: center;
 }
 
+.sobre .img-fundo {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 40px 0;
+}
+
+.sobre img {
+  width: 200px;
+
+}
 
 
 
+/* Portfólio*/
 
 .portfolio {
   grid-area: portfolio;
-  background-color: black;
+  background-color: rgb(32, 32, 32);
 }
+
 
 .contato {
   grid-area: contato;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(32, 32, 32);
+}
+
+.footer p {
+  text-align: center;
+  margin-top: 36px;
+  color: #fff;
 }

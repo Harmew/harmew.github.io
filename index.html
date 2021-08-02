@@ -12,9 +12,10 @@
   
   <div class="container-geral">
     
-    <div class="principal-container">
+    <div class="principal-container" id="home">
       <div class="inicial">
-          <img class="cena" src="img/Untitled.svg" alt="">
+        <img class="cena2" src="img/Untitled3.svg" alt="">
+        <img class="cena" src="img/Untitled.svg" alt="">
         <div id="menu-bar">
           <div id="menu" onclick="onClickMenu()">
             <div id="bar1" class="bar"></div>
@@ -23,18 +24,20 @@
           </div>
           <nav>
             <ul class="nav" id="nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Portfólio</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#contato">Contato</a></li>
             </ul>
           </nav>
         </div>
         <div class="menu-bg" id="menu-bg"></div>
+
         <div class="text-initial">
           <h1>Daniel de Oliveira</h1>
           <p>Um estudante de programação</p>
         </div>
+
         <div class="fundo">
           <ul>
             <li><a href="https://github.com/Harmew" target="_blank"><img src="img/github.png" alt="Github"></a></li>
@@ -42,6 +45,7 @@
             <li><a href="https://www.linkedin.com/in/daniel-de-oliveira-8b0368173/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a></li>
           </ul>
         </div>
+
         <div class="scrolldown">
           <i class="gg-chevron-down"></i>
         </div>
@@ -49,24 +53,34 @@
     </div>
 
     
-    <div class="sobre">
-      <div>
+    <div class="sobre" id="sobre">
+      <div class="img-fundo">
         <img src="img/3x4.png" alt="Eu">
-        <h2>Sobre mim</h2>
+      </div>
+      <h2>Sobre mim</h2>
+      <div>
+        Atualmente eu estudo a parte de front-end
       </div>
     </div>
 
 
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
+
 
     </div>
 
 
-    <div class="contato">
+    <div class="contato" id="contato">
 
     </div>
+
+    <footer class="footer">
+      <p>Desenvolvido por Daniel de Oliveira <span>Harmew</span></p>
+    </footer>
 
   </div>
+
+
   <script src="js/script.js"></script>
 </body>
 </html>
