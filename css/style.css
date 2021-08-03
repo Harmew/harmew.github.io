@@ -16,13 +16,13 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .container-geral {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(4, 100vh) auto;
+  grid-template-rows: minmax(100vh, auto) minmax(100vh, auto) 100vh 100vh auto;
   grid-template-areas: 
   "principal-container"
   "sobre"
@@ -232,23 +232,54 @@ img {
 
 .sobre {
   grid-area: sobre;
-  padding-top: 50px;
+  z-index: 3;
+
+}
+
+.sobre-subtitulo {
   margin: 0 auto;
+  text-align: center;
+  padding: 60px 0 ;
 }
 
-.sobre h2{
-  margin-top: 20px;
+.sobre-subtitulo h2 {
+  display: inline-block;
+  border-bottom: 3px solid rgb(111, 0, 255);
+  font-size: 2.25rem;
+}
+
+.sobre-imagem {
+  padding: 0px 0 0px 0;
   text-align: center;
 }
 
-.sobre .img-fundo {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 40px 0;
+.sobre-imagem img {
+  border: 3px solid rgb(111, 0, 255);
+  border-radius: 50%;
+  width: 190px;
 }
 
-.sobre img {
-  width: 200px;
+.sobre-texto {
+  max-width: 40%;
+  margin: 0px auto 50px auto;
+}
+
+.sobre-texto p {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+.sobre-texto h3 {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+@media (max-width: 1080px) {
+  .sobre-texto {
+    max-width: 70%;
+  }
 }
 
 /* Portfólio*/
@@ -258,6 +289,11 @@ img {
   background-color: rgb(32, 32, 32);
 }
 
+.portfolio h2 {
+  color: #fff;
+  text-align: center;
+  padding-top: 25%;
+}
 
 .contato {
   grid-area: contato;
@@ -273,3 +309,4 @@ img {
   color: #fff;
   padding: 30px;
 }
+
