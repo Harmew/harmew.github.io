@@ -233,7 +233,6 @@ img {
 .sobre {
   grid-area: sobre;
   z-index: 3;
-
 }
 
 .sobre-subtitulo {
