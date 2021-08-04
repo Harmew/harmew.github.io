@@ -130,7 +130,7 @@ h3 {
 }
 
 .menu-bg {
-  z-index: 1;
+  z-index: 8;
   width: 0;
   height: 0;
   margin: 20px 26px 0px 20px;
@@ -140,7 +140,7 @@ h3 {
 }
 
 #menu-bar{
-  z-index: 5;
+  z-index: 9;
   position: fixed;
 }
 
@@ -150,7 +150,7 @@ h3 {
   width: 400px;
   height: 400px;
   transform: translate(74%, -27%);
-  z-index: 4;
+  z-index: 8;
   position: fixed;
 }
 
