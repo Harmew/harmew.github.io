@@ -3,7 +3,7 @@ function onClickMenu() {
   document.getElementById("nav").classList.toggle("change");
   document.getElementById("menu-bg").classList.toggle("change-bg");
 }
-function initScrollSuave() {
+/*function initScrollSuave() {
   const linksInternos = document.querySelectorAll(' a[href^="#"]')
   function scrollToSection(element) {
     element.preventDefault()
@@ -17,4 +17,4 @@ function initScrollSuave() {
   linksInternos.forEach(link => {
     link.addEventListener('click', scrollToSection)
   })
-} initScrollSuave();
+} initScrollSuave();*/

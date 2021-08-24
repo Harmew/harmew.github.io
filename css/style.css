@@ -13,6 +13,10 @@ ul, li, a {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   overflow-x: hidden;
